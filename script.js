@@ -193,3 +193,30 @@ function animate() {
 
 init();
 animate();
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Fade in heading
+    const heading = document.querySelector('.heading');
+    heading.classList.add('fade-in');
+  
+    // Fade in about and logos when about section is in view
+    const aboutSection = document.getElementById('about');
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.getElementById('intro').classList.add('fade-in-left');
+          document.querySelectorAll('.logo div').forEach(logo => {
+            logo.classList.add('fade-in-right');
+          });
+        }
+      });
+    }, observerOptions);
+  
+    observer.observe(aboutSection);
+  });

@@ -89,14 +89,6 @@ canvas.polygon {
   }
 }
 
-/* .name {
-    font-family: "Yellowtail", sans-serif;
-    font-size: calc(4vw + 1rem);
-    margin-top: 1rem;
-
-
-} */
-
 .name {
   font-family: "Yellowtail", cursive;
   font-weight: 400;
@@ -157,6 +149,45 @@ canvas.polygon {
     right: 0;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 2s ease-in forwards;
+  }
+  
+  .fade-in-left {
+    animation: fadeInLeft 2s ease-in forwards;
+  }
+  
+  .fade-in-right {
+    animation: fadeInRight 2s ease-in forwards;
+  }
+
 .navbar {
     overflow: hidden;
     background-color: #333;
@@ -207,27 +238,24 @@ section {
     padding: 20px;
 }
 
-/* #intro {
-    opacity: 100%;
-    animation-name: opacity1;
-    animation-duration: 4s;
-}
-@keyframes opacity1{
-    from {opacity: 0%;}
-    to {opacity: 100%;}
-} */
-
 
 .logo {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     padding-top: 20px;
-    align-items: flex-start;
+    align-items: center;
+}
+
+#logoimg {
+    align-items: center;
+    
 
 }
 #logoName {
     align-items: center;
+    padding-bottom: 20px;
 }
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -324,3 +352,21 @@ section {
     text-align: center;
 }
 }
+
+@media only screen and (max-width: 350px) {
+    .name {
+        bottom: 35%; /* Adjust as needed */
+        right: 2%; /* Adjust as needed */
+    }
+    #logoName {
+        font-size: x-small;
+        text-align: center;
+    }
+
+    .logo {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        padding-top: 20px;
+        align-items: center;
+    }
+    }
