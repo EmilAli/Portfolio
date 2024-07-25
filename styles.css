@@ -222,12 +222,12 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     padding-top: 20px;
-    align-items: center;
+    align-items: flex-start;
 
 }
-/* #logoName {
-    margin-right: 100px;
-} */
+#logoName {
+    align-items: center;
+}
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
