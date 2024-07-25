@@ -1,0 +1,326 @@
+/* General styles */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000000;
+    height: 100%;
+    color: aliceblue;
+    font-family: "Kanit", sans-serif;
+    overflow: scroll;
+}
+
+.opening {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas.polygon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Set a lower z-index for the canvas */
+    overflow: scroll;
+}
+
+.heading {
+    position: relative;
+    z-index: 999; /* Ensure the heading is above the canvas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.introduction {
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(8vw + 1rem);
+  
+  position: relative;
+  color: transparent;
+  background: linear-gradient(to bottom, #f32170, #ff6b08, #cf23cf, #eedd44);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 1px rgba(243, 33, 112, 0.75), 
+               0 0 2px rgba(255, 107, 8, 0.75), 
+               0 0 4px rgba(207, 35, 207, 0.75), 
+               0 0 8px rgba(238, 221, 68, 0.75);
+  animation: flicker 3s linear infinite;
+}
+
+@keyframes flicker {
+  20%, 21%, 63%, 65%, 69.9%  {
+      opacity: 0.8;
+      text-shadow: 0 0 1px rgba(243, 33, 112, 0.75), 
+                   0 0 2px rgba(255, 107, 8, 0.75), 
+                   0 0 4px rgba(207, 35, 207, 0.75), 
+                   0 0 8px rgba(238, 221, 68, 0.75),
+                   -1px -1px 0 rgba(255,255,255, 0.4), 
+                   1px -1px 0 rgba(255,255,255, 0.4), 
+                   -1px 1px 0 rgba(255,255,255, 0.4), 
+                   1px 1px 0 rgba(255,255,255, 0.4), 
+                   0 -2px 8px,
+                   0 0 2px,
+                   0 0 5px #3230a3, 
+                   0 0 15px #13073d, 
+                   0 0 2px #3230a3, 
+                   0 2px 3px #000;
+  }
+  
+  0%, 19%, 22%, 62%, 64%, 70%, 100% {
+      opacity: 0.9;
+      text-shadow: none;
+  }
+}
+
+/* .name {
+    font-family: "Yellowtail", sans-serif;
+    font-size: calc(4vw + 1rem);
+    margin-top: 1rem;
+
+
+} */
+
+.name {
+  font-family: "Yellowtail", cursive;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  opacity: 80%;
+  margin-top: 1rem;
+  transform: translate(-50%, 50%) rotate(-10deg);
+  font-size: calc(8vw + 0.1rem);
+  color: rgb(158, 27, 27);
+  text-shadow: 3px 0px 10px #3529da;
+  bottom: 40%; /* Adjust as needed */
+  right: -10%; /* Adjust as needed */
+}
+.button {
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #cf23cf;
+    display: inline-block;
+    cursor: pointer;
+    color: #cf23cf;
+    font-family: Arial;
+    font-size: calc(1vw + 0.5rem);
+    font-weight: bold;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #cf23cf;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom, #cf23cf 5%, #8a2be2 100%);
+    background-color: #cf23cf;
+    color: white;
+}
+
+.button span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\21AF';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #cf23cf;
+    color: white;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
+/* Add padding to sections for better spacing */
+section {
+    padding: 60px 20px;
+}
+
+.content {
+    margin: 20px;
+    padding: 20px;
+}
+
+/* #intro {
+    opacity: 100%;
+    animation-name: opacity1;
+    animation-duration: 4s;
+}
+@keyframes opacity1{
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+} */
+
+
+.logo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    padding-top: 20px;
+    align-items: center;
+
+}
+/* #logoName {
+    margin-right: 100px;
+} */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.card {
+    background: #333;
+    --padding: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px 0 rgba(243, 33, 112, 0.2);
+}
+
+.card-header{
+    padding: var(--padding);
+    padding-bottom: 0;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.card-header.card-image{
+    padding: 0;
+    overflow: hidden;
+}
+
+.card-header.card-image > img{
+    display: block;
+    width: 100%;
+    max-height: 200px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card:hover > .card-header.card-image > img {
+    transform: scale(1.025);
+    transition: 200ms transform ease-in-out;
+}
+.card-body {
+    padding: 0 var(--padding);
+    font-size: smaller;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.btn {
+    background-color: #cf23cf;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.outline-btn {
+    background-color: transparent;
+    border: 1px solid #cf23cf;
+    color: #cf23cf;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.outline-btn:hover {
+    background-color: #cf23cf79;
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 624.55px) {
+.name {
+    bottom: 35%; /* Adjust as needed */
+    right: 2%; /* Adjust as needed */
+}
+#logoName {
+    font-size: small;
+    text-align: center;
+}
+}
