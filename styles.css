@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: inherit;
 }
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
 
 body, html {
     margin: 0;
@@ -158,10 +162,12 @@ canvas.polygon {
     from {
       opacity: 0;
       transform: translateX(-50px);
+      
     }
     to {
       opacity: 1;
       transform: translateX(0);
+      
     }
   }
   
@@ -169,23 +175,25 @@ canvas.polygon {
     from {
       opacity: 0;
       transform: translateX(50px);
+      
     }
     to {
       opacity: 1;
       transform: translateX(0);
+      
     }
   }
   
   .fade-in {
-    animation: fadeIn 2s ease-in forwards;
+    animation: fadeIn 2s ease-in-out forwards;
   }
   
   .fade-in-left {
-    animation: fadeInLeft 2s ease-in forwards;
+    animation: fadeInLeft 2s ease-in-out forwards;
   }
   
   .fade-in-right {
-    animation: fadeInRight 2s ease-in forwards;
+    animation: fadeInRight 2s ease-in-out forwards;
   }
 
 .navbar {
@@ -231,6 +239,13 @@ canvas.polygon {
 /* Add padding to sections for better spacing */
 section {
     padding: 60px 20px;
+}
+
+#titles {
+    /* background: linear-gradient(to bottom, #3230a3 50%, white 50%); */
+    background: linear-gradient(to bottom, #f32170, #ff6b08, #cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .content {
@@ -310,7 +325,7 @@ section {
 .btn {
     background-color: #cf23cf;
     border: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.993) !important;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -335,8 +350,11 @@ section {
     border-radius: 4px;
 }
 
+.btn:hover, .btn:focus {
+    background: #cf23cf9d;
+}
 .outline-btn:hover {
-    background-color: #cf23cf79;
+    background-color: #cf23cf5e;
     color: white;
 }
 

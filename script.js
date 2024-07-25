@@ -169,7 +169,7 @@ function drawBackground() {
     c.fillRect(0, 0, canvas.width, canvas.height);
 
     // Draw stars
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 50; i++) {
         var starX = Math.random() * canvas.width;
         var starY = Math.random() * canvas.height;
         var starSize = Math.random() * 1;
