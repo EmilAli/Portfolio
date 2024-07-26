@@ -30,7 +30,7 @@
             <div id="intro">
                 <h1 id="titles">About me</h1>
                 <p>
-                As a dedicated and innovative software developer, I specialize in crafting high-quality, scalable, and efficient front-end developer solutions. With a strong foundation in HTML5, CSS3, Javascript, MYSQL and Python, I have successfully delivered personal projects ranging from web applications to back-end databases. My passion for problem-solving, coupled with a keen eye for detail, drives me to continuously learn and adapt to new technologies. I thrive in collaborative environments and am committed to delivering exceptional results that exceed client expectations. Whether working independently or as part of a dynamic team, I bring a proactive and enthusiastic approach to every project.
+                As a dedicated and innovative software developer, I specialize in crafting high-quality, scalable, and efficient front-end developer solutions. With a strong foundation in HTML5, CSS3, Javascript, SQL and Python, I have successfully delivered personal projects ranging from web applications to back-end databases. My passion for problem-solving, coupled with a keen eye for detail, drives me to continuously learn and adapt to new technologies. I thrive in collaborative environments and am committed to delivering exceptional results that exceed client expectations. Whether working independently or as part of a dynamic team, I bring a proactive and enthusiastic approach to every project.
                 </p>
             </div>
             <div class="logo">
@@ -48,7 +48,7 @@
             </div>
             <div>
                 <img id="logoimg" src="./img/icons8-my-sql-512.png" style="width: 50%;">
-                <P id="logoName">MYSQL</P>
+                <P id="logoName">SQL</P>
             </div>
             <div>
                 <img id="logoimg" src="./img/icons8-python-512.png" style="width: 50%;">
@@ -110,7 +110,27 @@
             </div>
         </section>
         <section id="contact">
-            <h3 id="titles">Contact</h3>
+            <h1 id="titles">Contact</h1>
+            <div class="contact-container">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                <div class="contact-left-title">
+                    <h2 class="getInTouch">Get in touch</h2>
+                    <hr>
+                </div>
+                    <input type="hidden" name="access_key" value="6fa40b02-ddbc-4ec0-99d0-7ca60ccdb9e6">
+                    <input type="text" name="name" placeholder="Enter Name" class="contact-input" required>
+                    <input type="email" name="email" placeholder="Enter Email" class="contact-input" required>
+                    <textarea name="message" class="contact-input" placeholder="Enter Message" required></textarea>
+                    <button class="button"><span class="arrow">Send</span></button>
+                </form>
+                <div class="contact-right-title">
+                    <h2 class="getInTouch">Can also be reached below</h2>
+                    <hr>
+                    <a href="https://www.linkedin.com/in/emil-ali-1112776b/" target="_blank"><img class="linkedinlogo" src="./img/icons8-linkedin-512.png"></a>
+                    <button class="button"><a id="downloadCV" href="path/to/your-cv.pdf" download><span class="arrow">Download CV</span></a></button>
+                </div>
+                
+            </div>
         </section>
     </div>
     <script src="script.js"></script>

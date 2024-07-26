@@ -13,7 +13,7 @@ body, html {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: #000000;
+    background: #161616;
     height: 100%;
     color: aliceblue;
     font-family: "Kanit", sans-serif;
@@ -204,6 +204,7 @@ canvas.polygon {
     top: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.493);
 }
 
 .navbar a {
@@ -246,6 +247,7 @@ section {
     background: linear-gradient(to bottom, #f32170, #ff6b08, #cf23cf, #eedd44);
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-size: 50px;
 }
 
 .content {
@@ -256,7 +258,7 @@ section {
 
 .logo {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
     padding-top: 20px;
     align-items: center;
 }
@@ -283,7 +285,7 @@ section {
     --padding: 1rem;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px 0 rgba(243, 33, 112, 0.2);
+    box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.493);
 }
 
 .card-header{
@@ -369,6 +371,9 @@ section {
     font-size: small;
     text-align: center;
 }
+.contact-container {
+    grid-template-columns: 1fr;
+}
 }
 
 @media only screen and (max-width: 350px) {
@@ -388,3 +393,101 @@ section {
         align-items: center;
     }
     }
+
+    .contact-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted min width for responsiveness */
+        align-items: start;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left-title .getInTouch {
+    font-weight: 600;
+    color:#ca6fca;
+    font-size: 20px;
+    margin-bottom: 5px;
+
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #ca6fca;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-input {
+    width: 300px;
+    height: 50p;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    color:#333;
+    border-radius: 50px;
+}
+
+.contact-left textarea {
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-input:focus {
+    border: 2px solid #ca6fca;
+}
+
+.contact-input::placeholder {
+    color:#797979;
+}
+
+.contact-left #sendbtn {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(to bottom, #cf23cf 5%, #8a2be2 100%);
+    cursor: pointer;
+}
+
+.button .arrow:after {
+    content: '\02C3' !important;
+}
+
+.contact-right-title .getInTouch {
+    font-weight: 600;
+    color:#ca6fca;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-left: 35px;
+}
+
+.contact-right-title hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #ca6fca;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 35px;
+}
+
+.linkedinlogo {
+    padding: 0;
+    margin-right: 100px;
+    width: 50%; 
+}
+
