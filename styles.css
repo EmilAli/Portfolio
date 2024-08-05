@@ -247,6 +247,7 @@ section {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-size: 50px;
+    
 }
 
 .content {
@@ -471,7 +472,7 @@ section {
     color:#ca6fca;
     font-size: 20px;
     margin-bottom: 5px;
-    margin-left: 35px;
+    margin-left: 0px;
 }
 
 .contact-right-title hr {
@@ -481,12 +482,13 @@ section {
     background-color: #ca6fca;
     border-radius: 10px;
     margin-bottom: 20px;
-    margin-left: 40px;
+    margin-left: 0px;
 }
 
 .linkedinlogo {
     padding: 0;
     margin-right: 200px;
     width: 50%; 
+    margin-left: -35px;
 }
 
