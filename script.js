@@ -1,3 +1,16 @@
+const audio = document.getElementById('myAudio');
+const muteButton = document.getElementById('muteButton');
+
+muteButton.addEventListener('click', () => {
+    audio.muted = !audio.muted;
+    muteButton.textContent = audio.muted ? 'Unmute' : 'Mute';
+});
+
+document.addEventListener('click', function () {
+    audio.play();
+});
+
+
 // Select the hover button and the about section
 const hoverButton = document.querySelector('.button');
 const aboutSection = document.getElementById('about');
@@ -220,3 +233,5 @@ document.addEventListener('DOMContentLoaded', function () {
   
     observer.observe(aboutSection);
   });
+
+  

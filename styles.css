@@ -29,6 +29,19 @@ body, html {
     align-items: center;
 }
 
+#muteButton {
+    float: right;
+    overflow: hidden;
+    background-color: #333;
+    color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.493);
+}
+
 canvas.polygon {
     display: block;
     width: 100%;
